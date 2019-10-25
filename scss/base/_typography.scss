@@ -1,0 +1,68 @@
+/*==============================================
+   end typography css
+==============================================*/
+/*----- load fonts : circular----*/
+@font-face {
+  font-family: "CircularStd";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/circular/CircularStd-Book.woff") format("woff"),
+    url("../fonts/circular/CircularStd-Book.woff2") format("woff2"),
+    url("../fonts/circular/CircularStd-Book.ttf") format("ttf"),
+    url("../fonts/circular/CircularStd-Book.otf") format("otf");
+}
+
+@font-face {
+  font-family: "CircularStd";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/circular/CircularStd-Bold.woff") format("woff"),
+    url("../fonts/circular/CircularStd-Bold.woff2") format("woff2"),
+    url("../fonts/circular/CircularStd-Bold.ttf") format("ttf"),
+    url("../fonts/circular/CircularStd-Bold.otf") format("otf");
+}
+
+@font-face {
+  font-family: "CircularStd";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/circular/CircularStd-Black.woff") format("woff"),
+    url("../fonts/circular/CircularStd-Black.woff2") format("woff2"),
+    url("../fonts/circular/CircularStd-Black.ttf") format("ttf"),
+    url("../fonts/circular/CircularStd-Black.otf") format("otf");
+}
+
+/*----- load fonts : muli ----*/
+@import url("https://fonts.googleapis.com/css?family=Muli:400,600,700,800&display=swap");
+
+$heading-font: "CircularStd", sans-serif;
+$body-font: "Muli", sans-serif;
+
+/*==============================================
+   end typography css
+==============================================*/
+
+.title {
+  &--sec {
+    font-size: 30px;
+    line-height: 54px;
+    font-weight: 400;
+
+    @include lg {
+      font-size: 40px;
+    }
+  }
+
+  &--sm {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: $body-font;
+    margin-bottom: 15px;
+    display: block;
+  }
+}
+
+.para {
+    font-size: 20px;
+    line-height: 36px;
+}

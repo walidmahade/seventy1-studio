@@ -1,0 +1,129 @@
+#site-footer {
+    background-color: #212529;
+    color: #fff;
+    padding: 85px 0 45px 0;
+    text-align: center;
+
+    @include lg {
+        text-align: left;
+    }
+
+    p, a {
+        display: block;
+        margin: 0;
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .row.footer__bottom {
+        align-items: center;
+        align-content: center;
+        padding-top: 45px;
+        margin-top: 45px;
+        border-top: 1px solid rgba($color: #fff, $alpha: .1);
+        justify-content: center;
+        
+        @include md {
+            justify-content: space-between;
+        }
+
+        .bs-brand {
+            font-size: 30px;
+            font-family: $heading-font;
+        }
+
+        .para {
+            font-size: 14px;
+        }
+    }
+
+    .col {
+        padding: 0 15px;
+        // max-width: 30%;
+        width: 100%;
+        margin-bottom: 45px;
+
+        @include md {
+            width: 50%;
+        }
+
+        @include lg {
+            width: 33%;
+            &:last-child {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @include xl {
+            width: auto;
+
+            &:last-child {
+                width: auto;
+                text-align: left;
+            }
+        }
+    }
+
+    .mm__social__icons {
+        justify-content: center;
+
+        @include lg {
+            justify-content: flex-start;
+        }
+    }
+
+    .foot-heading {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 35px;
+
+        &.mt {
+            margin-top: 50px;
+        }
+    }
+
+    .link {
+        line-height: 50px;
+        transition: color .3s ease-in-out;
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    .lead-capture {
+        margin-top: 25px;
+
+        input {
+            border: none;
+            border-radius: 50px;
+            padding: 16px 30px;
+            font-size: 14px;
+            color: #495057;
+            background: #fff;
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+
+        .btn.btn--primary {
+            padding: 18px 30px !important;
+            font-size: 14px;
+            background-color: $blue;
+            color: #fff;
+            margin-left: -50px;
+
+            &:hover {
+                background-color: $dark;
+            }
+        }
+    }
+}
