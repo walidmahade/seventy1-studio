@@ -47,7 +47,7 @@
       color: #fff;
     }
   }
-  
+
   &--light {
     box-shadow: 0 0 20px 10px rgba($color: #3D8BFF, $alpha: .1);
     transition: background 0.3s ease-in-out;
@@ -55,6 +55,19 @@
 
     &:hover {
       background-color: $dark;
+      color: #fff;
+    }
+  }
+
+
+  &--dark {
+    box-shadow: 0 0 20px 10px rgba($color: #3D8BFF, $alpha: .1);
+    transition: background 0.3s ease-in-out;
+    background-color: $dark;
+    color: #fff;
+
+    &:hover {
+      background-color: $blue;
       color: #fff;
     }
   }

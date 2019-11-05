@@ -1,0 +1,145 @@
+.about-page--services {
+    .tab-nav {
+        .container {
+            justify-content: center;
+        }
+
+        &__item {
+            margin: 0 20px;
+            @include md {
+                margin: 0 40px;
+            }
+
+            @include lg {
+                margin: 0 60px;
+            }
+        }
+    } // tab nav
+
+    #about-who-we-are {
+        background-image: url("../images/bg-shape-services.png");
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: -100px -200px;
+    }
+
+
+    #our-values {
+        .services {
+            & > .container {
+                width: 1310px !important;
+            }
+        }
+
+        .left {
+            width: 100%;
+            @include rwd(1230) {
+                width: 45%;
+                max-width: 583px;
+            }
+
+            .para {
+                margin: 35px 0;
+            }
+        }
+
+        .right {
+            width: 100%;
+            padding-right: 0;
+            @include rwd(1230) {
+                width: 50%;
+            }
+        }
+
+        .services__box {
+            //background: pink;
+            justify-content: center !important;
+
+            @include rwd(1230) {
+                justify-content: space-between !important;
+            }
+
+            &__item {
+                margin: 0;
+                width: 45%;
+                min-width: 280px;
+                padding: 20px;
+                margin-bottom: 35px;
+
+                &:last-child,
+                &:nth-last-child(2) {
+                    margin-bottom: 0;
+                }
+
+                @include lg {
+                    padding: 50px;
+                }
+
+                @include rwd(1230) {
+                    padding: 0;
+                }
+            }
+
+            .title--small {
+                font-size: 18px;
+            }
+        }
+    }
+
+    #work-process {
+        padding: 85px 0;
+        background-image: url("../images/work-process-shapes.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #404D66;
+        color: #fff;
+
+        .head {
+            text-align: center;
+            max-width: 730px;
+            margin: 0 auto;
+        }
+
+        .body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .card {
+                box-shadow: 0 10px 30px  rgba(#ADB5BD, .08);
+                padding: 40px;
+                background-color: #fff;
+                color: $dark;
+                border-radius: 5px;
+                width: 97%;
+                margin: 0 1.4% 30px 1.4%;
+
+                @include md {
+                    width: 47%;
+                }
+
+                @include lg {
+                    width: 30%;
+                }
+            }
+
+            .card__title {
+                position: relative;
+                padding: 40px 0;
+                color: $dark;
+
+                .num {
+                    position: absolute;
+                    left: -20px;
+                    top: 0;
+                    font-size: 80px;
+                    color: #ADB5BD;
+                    opacity: .15;
+                    font-weight: 700;
+                }
+            }
+        } // body
+
+    }
+
+}

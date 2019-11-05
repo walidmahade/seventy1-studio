@@ -7,7 +7,9 @@ $d-blue: #134c9d;
 
 // gradient #2D79E6 - #053476
 
-
+@mixin sec-bg {
+  background: rgba(#8193AE, .04);
+}
 
 /****************************************
      mixins

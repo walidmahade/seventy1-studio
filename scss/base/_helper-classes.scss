@@ -6,6 +6,15 @@
   margin: 0 auto;
 }
 
+.img {
+  display: block;
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
 // ------------- grid spacing
 .pl-grid {
   padding-left: calc((100% - 1170px) / 2);
