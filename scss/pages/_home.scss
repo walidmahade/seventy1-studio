@@ -6,6 +6,7 @@
     font-size: 34px;
     color: #212529;
     line-height: 1.5;
+    margin-bottom: 0;
 
     // responsive styles
     @include lg {
@@ -33,11 +34,10 @@
 
     // responsive styles
     @include lg {
-        padding: 40px 0;
+        padding: 30px 0;
         text-align: left;
         font-size: 20px;
         line-height: 36px;
-        padding: 40px 0;
         margin-right: 140px;
     }
 }
@@ -193,7 +193,7 @@
     .container {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
         flex-wrap: wrap;
     }
 
@@ -204,7 +204,7 @@
         // responsive styles
         @include lg {
             text-align: left;
-            width: 30%;
+            width: 40%;
         }
     } // left
 
@@ -216,7 +216,8 @@
         @include lg {
             padding-right: 80px;
             text-align: left;
-            width: 65%;
+            width: 55%;
+            padding-bottom: 15px;
         }
 
         p {

@@ -10,7 +10,24 @@
   }
 
   &__cta {
+    //padding-right: 100px;
+    opacity: 0;
     padding-right: 100px;
+
+    @include lg {
+      opacity: 1;
+      padding-right: 60px;
+    }
+
+    .btn--primary {
+      background: $blue;
+      box-shadow: 0 2px 10px 1px rgba($blue, 0.4);
+
+      &:hover {
+        background: $dark;
+        box-shadow: 0 0 0 0 rgba(white, 0);
+      }
+    }
   }
 }
 

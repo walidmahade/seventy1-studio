@@ -6,7 +6,7 @@
   color: $text;
   text-decoration: none;
   border: 0;
-  background-color: transparent;
+  background-color: $dark;
   outline: none;
   cursor: pointer;
   font-size: 14px;
@@ -18,7 +18,7 @@
   transition: background 0.3s ease-in-out;
 
   &:hover {
-    background-color: $dark;
+    background-color: $blue;
     color: #fff;
   }
 
@@ -36,40 +36,50 @@
   }
 
   &--primary {
-    background-color: $blue;
-    box-shadow: 0 2px 10px 1px rgba($blue, 0.4);
-    color: #fff;
-    transform: scale(1);
-    transition: background 0.3s ease-in-out;
-
-    &:hover {
-      background-color: $dark;
-      color: #fff;
-    }
-  }
-
-  &--light {
-    box-shadow: 0 0 20px 10px rgba($color: #3D8BFF, $alpha: .1);
-    transition: background 0.3s ease-in-out;
-    color: $blue;
-
-    &:hover {
-      background-color: $dark;
-      color: #fff;
-    }
-  }
-
-
-  &--dark {
-    box-shadow: 0 0 20px 10px rgba($color: #3D8BFF, $alpha: .1);
-    transition: background 0.3s ease-in-out;
     background-color: $dark;
     color: #fff;
+    transform: scale(1);
+    box-shadow: 0 2px 10px 1px rgba($blue, 0);
+    transition: all 0.3s ease-in-out;
 
     &:hover {
       background-color: $blue;
       color: #fff;
+      box-shadow: 0 2px 10px 1px rgba($blue, 0.4);
     }
   }
+
+  &--light {
+    background-color: $dark;
+    color: #fff;
+    transform: scale(1);
+    box-shadow: 0 2px 10px 1px rgba($blue, 0);
+    transition: all 0.3s ease-in-out;
+
+    svg {
+      * {
+        stroke: #fff;
+      }
+    }
+
+    &:hover {
+      background-color: $blue;
+      color: #fff;
+      box-shadow: 0 2px 10px 1px rgba($blue, 0.4);
+    }
+  }
+
+
+  //&--dark {
+  //  box-shadow: 0 0 20px 10px rgba($color: #3D8BFF, $alpha: .1);
+  //  transition: background 0.3s ease-in-out;
+  //  background-color: $dark;
+  //  color: #fff;
+  //
+  //  &:hover {
+  //    background-color: $blue;
+  //    color: #fff;
+  //  }
+  //}
 
 }
