@@ -19,6 +19,14 @@
             margin-bottom: 40px;
         }
         border-bottom: 1px solid rgba(#8193AE, .1);
+
+        .cta {
+            background: white;
+            margin-bottom: -1px;
+            a {
+                margin: 0 10px;
+            }
+        }
     }
 
     .required-star {
