@@ -541,6 +541,7 @@
     align-items: center;
     flex-wrap: wrap;
     border-radius: 6px;
+    text-align: center;
 
     @include lg {
         justify-content: space-between;
@@ -553,6 +554,7 @@
     .client__item {
         width: 50%;
         padding: 25px;
+        text-align: center;
 
         @include md {
             width: 33%;
