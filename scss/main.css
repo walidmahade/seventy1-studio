@@ -915,10 +915,12 @@ pre tt:after {
 .bs-header__right {
   display: flex;
   align-items: center;
+  position: fixed;
+  right: 3%;
 }
 .bs-header__cta {
   opacity: 0;
-  padding-right: 100px;
+  padding-right: 60px;
 }
 @media (min-width: 992px) {
   .bs-header__cta {
@@ -977,12 +979,9 @@ pre tt:after {
   padding: 12.5px 12px;
   background-color: #212529;
   border-radius: 40px;
-  margin-left: 39px;
   transform: translateX(0);
   transition: transform 0.3s ease-in-out;
   will-change: transform;
-  position: fixed;
-  right: 3%;
 }
 #menu-trigger:focus {
   outline: none;
@@ -1372,6 +1371,18 @@ pre tt:after {
   transition: all 0.3s ease-in-out;
 }
 .btn--primary:hover {
+  background-color: #3d8bff;
+  color: #fff;
+  box-shadow: 0 2px 10px 1px rgba(61, 139, 255, 0.4);
+}
+.btn--blue {
+  background-color: #3d8bff;
+  color: #fff;
+  transform: scale(1);
+  box-shadow: 0 2px 10px 1px rgba(61, 139, 255, 0);
+  transition: all 0.3s ease-in-out;
+}
+.btn--blue:hover {
   background-color: #3d8bff;
   color: #fff;
   box-shadow: 0 2px 10px 1px rgba(61, 139, 255, 0.4);
@@ -1818,10 +1829,14 @@ pre tt:after {
 }
 #our-work .projects .project__item {
   width: 100%;
-  box-shadow: 0 10px 20px rgba(129, 147, 174, 0.1);
+  box-shadow: 0 0 5px 2px rgba(129, 147, 174, 0.1);
   padding: 20px;
   border-radius: 5px;
   margin: 20px 0 0 0;
+  transition: all 0.3s ease-in-out;
+}
+#our-work .projects .project__item:hover {
+  box-shadow: 0 0 10px 5px rgba(61, 139, 255, 0.1);
 }
 @media (min-width: 768px) {
   #our-work .projects .project__item {
@@ -1846,8 +1861,11 @@ pre tt:after {
 }
 #our-work .projects .project__links .name {
   font-size: 16px;
+  color: #212529;
+  text-decoration: underline;
 }
 #our-work .projects .project__links .link {
+  display: none;
   border-radius: 5px;
   border: 2px solid #D5DDE5;
   padding: 4px 6px;
@@ -1997,6 +2015,7 @@ pre tt:after {
   right: 30%;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  display: none;
 }
 #testimonials .glide__slide--active .client_img {
   opacity: 1;
@@ -2010,7 +2029,7 @@ pre tt:after {
   font-weight: 400;
 }
 #testimonials .glide__slide .para {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
   margin-top: 26px;
   line-height: 36px;
@@ -2621,8 +2640,8 @@ pre tt:after {
   width: 96%;
   border-radius: 6px;
   margin: 120px auto;
-  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
   padding: 40px 25px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   /*---------------------------*/
 }
 @media (min-width: 768px) {
@@ -2668,7 +2687,7 @@ pre tt:after {
   align-items: center;
   align-content: center;
   margin-right: 50px;
-  margin-bottom: 25px;
+  margin-top: 20px;
   flex-wrap: wrap;
   cursor: pointer;
 }
@@ -2706,6 +2725,9 @@ pre tt:after {
 #contact-wrap .options input:checked + label .icon {
   background-color: #3d8bff;
 }
+#contact-wrap #client-budget .options__item {
+  margin-top: 20px;
+}
 #contact-wrap #target-platforms .heading {
   margin-bottom: 30px;
 }
@@ -2714,13 +2736,13 @@ pre tt:after {
 }
 @media (min-width: 768px) {
   #contact-wrap #target-platforms .options {
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 }
 #contact-wrap #target-platforms .options__item {
   width: 140px;
   height: 140px;
-  margin: 0 0 35px 0;
+  margin: 0 17px 35px 17px;
   background-color: #F8FBFE;
   border-radius: 6px;
 }
@@ -2746,6 +2768,7 @@ pre tt:after {
 }
 #contact-wrap #target-platforms .options__item .platform-icon {
   width: 100%;
+  padding-bottom: 10px;
 }
 #contact-wrap #target-platforms .options__item span {
   width: 100%;
@@ -2802,7 +2825,11 @@ pre tt:after {
   flex-wrap: wrap;
 }
 #pricing-calculator button {
+  cursor: pointer;
   outline: none;
+  border: none;
+  background: transparent;
+  padding: 0;
 }
 #pricing-calculator .left,
 #pricing-calculator .right {
@@ -2816,6 +2843,10 @@ pre tt:after {
 }
 #pricing-calculator .price-section {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+}
+#pricing-calculator .price-section:last-child {
+  margin-bottom: 85px;
 }
 #pricing-calculator .price-section .beefup__body {
   padding: 0 20px 20px 20px;
@@ -2827,8 +2858,11 @@ pre tt:after {
 #pricing-calculator .price-section .title--sm {
   margin-bottom: 0;
   font-size: 18px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 20px;
+}
+#pricing-calculator .price-section .title--sm button {
+  width: 100%;
+  text-align: left;
 }
 #pricing-calculator .price-section .sec--title {
   font-weight: bold;
@@ -2946,6 +2980,20 @@ pre tt:after {
 #pricing-overview .terms-agree label {
   margin-left: 10px;
 }
+#pricing-overview #btn-send-form {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#coming-soon {
+  padding: 85px 0;
+  text-align: center;
+}
+#coming-soon img {
+  width: 450px;
+  margin-bottom: 35px;
+}
+
 /*==============================================
     end imports
 ==============================================*/

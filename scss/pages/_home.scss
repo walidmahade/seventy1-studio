@@ -410,12 +410,18 @@
     /* ===========  projects grid ============ */
     .projects {
         margin-top: 45px;
+
         .project__item {
             width: 100%;
-            box-shadow: 0 10px 20px rgba($color: #8193AE, $alpha: .1) ;
+            box-shadow: 0 0 5px 2px rgba($color: #8193AE, $alpha: .1) ;
             padding: 20px;
             border-radius: 5px;
             margin: 20px 0 0 0;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                box-shadow: 0 0 10px 5px rgba($color: $blue, $alpha: .1) ;
+            }
 
             @include md {
                 width: 48%;
@@ -440,8 +446,11 @@
 
             .name {
                 font-size: 16px;
+                color: $dark;
+                text-decoration: underline;
             }
             .link {
+                display: none;
                 border-radius: 5px;
                 border: 2px solid #D5DDE5;
                 padding: 4px 6px;
@@ -602,6 +611,7 @@
             right: 30%;
             opacity: 0;
             transition: opacity .3s ease-in-out;
+            display: none;
         }
 
         &--active {
@@ -619,7 +629,7 @@
             font-weight: 400;
         }
         .para {
-            font-size: 18px;
+            font-size: 22px;
             font-weight: 400;
             margin-top: 26px;
             line-height: 36px;

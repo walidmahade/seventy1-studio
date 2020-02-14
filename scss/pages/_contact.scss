@@ -3,8 +3,9 @@
     width: 96%;
     border-radius: 6px;
     margin: 120px auto;
-    box-shadow: 0 0 20px 10px rgba($color: #000000, $alpha: .1);
+    //box-shadow: 0 0 20px 10px rgba($color: #000000, $alpha: .1);
     padding: 40px 25px;
+    border: 1px solid rgba(0,0,0,.1);
 
     @include md {
         padding: 80px 110px;
@@ -56,9 +57,13 @@
             align-items: center;
             align-content: center;
             margin-right: 50px;
-            margin-bottom: 25px;
+            margin-top: 20px;
             flex-wrap: wrap;
             cursor: pointer;
+
+            //@include md {
+            //    margin-bottom: 0;
+            //}
 
             label {
                 cursor: pointer;
@@ -101,6 +106,14 @@
         }
     }
 
+    #client-budget {
+        .options {
+            &__item {
+                margin-top: 20px;
+            }
+        }
+    }
+
     // target platforms section
     #target-platforms {
         .heading {
@@ -111,13 +124,13 @@
             justify-content: space-evenly;
 
             @include md {
-                justify-content: space-between;
+                justify-content: flex-start;
             }
 
             &__item {
                 width: 140px;
                 height: 140px;
-                margin: 0 0 35px 0;
+                margin: 0 17px 35px 17px;
                 background-color: #F8FBFE;
                 border-radius: 6px;
              
@@ -146,6 +159,7 @@
 
                 .platform-icon {
                     width: 100%;
+                    padding-bottom: 10px;
                 }
                 span {
                     width: 100%;

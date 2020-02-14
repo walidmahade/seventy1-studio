@@ -1,7 +1,7 @@
 console.log("scripts loaded");
 
-const menuTrigger = document.getElementById("menu-trigger")
-const mainMenu = document.getElementById("main-menu")
+const menuTrigger = document.getElementById("menu-trigger");
+const mainMenu = document.getElementById("main-menu");
 
 const menuShowHide = e => {
     e.currentTarget.classList.toggle("open");
@@ -32,19 +32,25 @@ if (mainMenu) {
 ==================================*/
 const platformSelect = document.querySelectorAll("#target-platforms .options__item");
 
-platformSelect.forEach(elm => {
-    elm.addEventListener("click", (e) => {
-        // console.log(elm);
-        e.preventDefault();
-        let currentItem = e.currentTarget;
+if (platformSelect) {
+    platformSelect.forEach(elm => {
+        elm.addEventListener("click", (e) => {
+            // console.log(elm);
+            e.preventDefault();
+            let currentItem = e.currentTarget;
 
-        if (currentItem.classList.contains("active")) {
-            currentItem.classList.remove("active")
-            currentItem.children[0].removeAttribute("checked");
-        } else {
-            currentItem.classList.add("active")
-            currentItem.children[0].setAttribute("checked", true);
-        }
-    })
-});
+            if (currentItem.classList.contains("active")) {
+                currentItem.classList.remove("active");
+                currentItem.children[0].removeAttribute("checked");
+            } else {
+                currentItem.classList.add("active");
+                currentItem.children[0].setAttribute("checked", true);
+            }
+        })
+    });
+}
 
+/*==================================
+        pricing Page
+==================================*/
+// $(".has-hidden-field").click(function () {});
