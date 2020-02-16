@@ -144,9 +144,12 @@
 </script>
 <script src="js/main.js"></script>
 
-<!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7042929.js"></script>
-<!-- End of HubSpot Embed Code -->
+<!--skip hub spot chat on contact page-->
+<?php if($request_uri === "/contact") {} else { ?>
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7042929.js"></script>
+    <!-- End of HubSpot Embed Code -->
+<?php } ?>
 
 </body>
 

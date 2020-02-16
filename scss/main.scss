@@ -28,3 +28,11 @@
 /*==============================================
     end imports
 ==============================================*/
+
+//hide hubspot branding
+#hubspot-messages-iframe-container iframe {
+  display: none !important;
+}
+.text-center.m-bottom-2 {
+  display: none !important;
+}

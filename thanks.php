@@ -24,7 +24,7 @@
 /**
  * Collect submitted data
  */
-$mail_to = "walidmahade@gmail.com";
+$mail_to = "contact@seventy1.studio";
 
 $service_type = "";
 foreach ($_POST["service-type"] as $st) {
@@ -42,7 +42,7 @@ $budget = $_POST["budget"];
 $name = $_POST["name"];
 $email = $_POST["email"];
 $message = $_POST["message"];
-$links = $_POST["links"];
+//$links = $_POST["links"];
 
 $email_body = "
     Client Name: $name \n
@@ -51,13 +51,12 @@ $email_body = "
     Services Needed: $service_type \n
     Platforms: $select_platforms \n
     Message: $message \n
-    Attachments: $links \n
 ";
 
 //var_dump($email_body);
 
 // send email
-mail($mail_to,"New client: Seventy1.agency", $email_body);
+mail($mail_to,"New client: Seventy1.agency", $email_body, "From: $adminmail\nX-Mailer: PHP/", "-odb -f $adminmail");
 
 ?>
 

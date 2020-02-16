@@ -1,10 +1,10 @@
 <?php
 
-$request = $_SERVER['REQUEST_URI'];
+$request_uri = $_SERVER['REQUEST_URI'];
 //var_dump($request);
 
 
-switch ($request) {
+switch ($request_uri) {
     case '':
     case '/' :
         require __DIR__ . '/home.php';

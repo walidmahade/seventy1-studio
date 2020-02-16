@@ -6,9 +6,9 @@
                 Hi, Let's talk<br>
                 about your <span class="highlight">project!</span>
             </h2>
-            <p class="para">
-                We are a design agency shaping ideas into products. We help startups and enterprises invent.
-            </p>
+<!--            <p class="para">-->
+<!--                We are a design agency shaping ideas into products. We help startups and enterprises invent.-->
+<!--            </p>-->
         </div>
 
         <form method="post" action="/thanks">
@@ -64,7 +64,7 @@
             <!-- END service-types -->
 
             <!-- Start service-types -->
-            <div class="line-item" id="client-budget">
+            <div class="line-item" id="client-budget" style="display: none">
                 <h3 class="heading">
                     Your budget for this project
                     <span class="required-star">
@@ -73,10 +73,9 @@
                 </h3>
 
                 <div class="options">
-
                     <!-- item START -->
                     <div class="options__item">
-                        <input type="radio" name="budget" id="around-1000" value="$1000" checked>
+                        <input type="radio" name="budget" id="around-1000" value="$1000">
 
                         <label for="around-1000">
                             <div class="icon">
@@ -135,7 +134,7 @@
                     <!-- item END -->
                     <!-- item START -->
                     <div class="options__item">
-                        <input type="radio" name="budget" id="rather-not-say" value="Dont want to say it">
+                        <input type="radio" name="budget" id="rather-not-say" value="Dont want to say it" checked>
 
                         <label for="rather-not-say">
                             <div class="icon">
@@ -233,10 +232,10 @@
                         Tell us about your project
                         <span class="required-star"> <img src="images/star.svg" alt=""> </span>
                     </h3>
-                    <textarea rows="10" name="message" placeholder="Your important project details." required></textarea>
+                    <textarea rows="10" name="message" placeholder="Your important project details/idea." required></textarea>
                 </div>
 
-                <div class="field">
+                <div class="field" style="display: none">
                     <h3 class="heading">
                         Attachments or documents.
                         <span class="required-star"> <img src="images/star.svg" alt=""> </span>
